@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>App Template</title>
+    <link rel="shortcut icon"
+          href="./icon.png"
+          type="image/vnd.microsoft.icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+    <!-- Angular controllers -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="js/login_ng.js"></script>
+  </head>
+
+  <body ng-app="loginApp" ng-controller="loginCtrl">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Template Application</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive"> <!-- ng-app="loginApp" ng-controller="loginCtrl" -->
+        <!-- div class="collapse navbar-collapse" id="navbarResponsive" -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Other link
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="dropdown-toggle nav-link font-weight-bold font-italic text-uppercase" data-toggle="dropdown" href="#" href="#">{{user}} <b class="caret"></b>  </a>
+              <ul class="dropdown-menu" role="menu">
+		    <li class="nav-item"><a class="skel-layers-ignoreHref nav-link" href ng-click="$event.preventDefault();setModal()" >Details</a></li>
+		    <li class="nav-item"><a class="skel-layers-ignoreHref nav-link"  href ng-click="$event.preventDefault();logout();" >Logout</a></li>
+	      </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <h1 class="display-10 headerShowing">Welcome to the homepage of our SAML Sample App!</h1>
+        <p class="lead">An authenticated user can now interact with your template app.</p>
+
+
+      <!-- Page Features -->
+      <div class="row text-center">
+
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Service 1</h4>
+              <p class="card-text">TBD</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary disabled">None yet!</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Service 2</h4>
+              <p class="card-text">TBD</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary disabled">None yet!</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Luis 2020</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript da aplicacao -->
+    <script src="js/dashboard.js"></script>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade display:inline-block;" id="updateModal" role="dialog"  aria-labelledby="myModalLabel"
+         aria-hidden="true" data-backdrop="false" >
+        <!-- Modal content-->
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"
+                        id="myModalLabel"><span class="glyphicon glyphicon-stats"></span>Attributes</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                            <div class="row">
+                                <div class='col-md-12'>
+                                    <br/>
+
+                                    <div class="one-half overflow:auto;display:inline;">
+                                        <label for="email" data-toggle="tooltip"
+                                               data-placement="top"
+                                               title="User e-mail">User e-mail:&nbsp;</label>
+                                    </div>
+                                    <div class="last overflow:auto;display:inline;">
+                                        <input readonly type="text" class="form-control" id="email"
+                                               ng-model="userdetail.email"/>
+                                    </div>
+
+
+                                    <div class="one-half overflow:auto;display:inline;">
+                                        <label for="fullName" data-toggle="tooltip"
+                                               data-placement="top"
+                                               title="User full name">Full name:&nbsp;</label>
+                                    </div>
+                                    <div class="last overflow:auto;display:inline;">
+                                        <input readonly type="text" class="form-control" id="fullName"
+                                                ng-model="userdetail.nomecompleto"/>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary " data-dismiss="modal" >OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  </body>
+
+</html>

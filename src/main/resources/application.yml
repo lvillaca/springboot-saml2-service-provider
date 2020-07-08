@@ -1,0 +1,30 @@
+server:
+  port: 8999
+  ssl:
+    key-store-type: JKS
+    key-store: ${JENKINS_PRIVATE_CERT}
+    key-store-password: ${JENKINS_PRIVATE_CERT_PASSWD}
+    key-alias: ${JENKINS_PRIVATE_CERT_ALIAS}
+
+
+
+logging:
+  level:
+    org.springframework.security.saml: DEBUG
+    luis.app: DEBUG
+
+spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          myidp:
+            signing.credentials:
+              - privateKeyLocation: ${JENKINS_SP_PRIVATE_CERT}
+                certificateLocation: ${JENKINS_SP_PUBLIC_CERT}
+            identityprovider:
+              entityId: ${JENKINS_ENTITY_ID}
+              ssoUrl: ${JENKINS_METADATA_URL}
+              verification.credentials:
+                - certificateLocation: ${JENKINS_IDP_PUBLIC_CERT} 
+

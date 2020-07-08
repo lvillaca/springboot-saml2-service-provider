@@ -1,0 +1,53 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+  display: block;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+  display: none;
+}
+
+#toDownload {
+  background-color: #ddd;
+  display: none;
+}
+
+.navbar-nav > li > .dropdown-menu { 
+	color: white;
+	background-color: #343a40;
+}
+
+@media screen and (max-width: 600px) {
+  .headerShowing {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}

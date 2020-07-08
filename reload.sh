@@ -16,8 +16,8 @@ export outerport=9054
 #----------------------- INICIA PROCESSO DE DEPLOYMENT AQUI!!! -----------------------------------------------------
 
 #vars IDP SAML
-export JENKINS_METADATA_URL="https://myoidc.com/auth/realms/REALM/protocol/saml"
-export JENKINS_ENTITY_ID="https://myoidc.com/auth/realms/REALM"
+export JENKINS_METADATA_URL="https://myidp.com/auth/realms/REALM/protocol/saml"
+export JENKINS_ENTITY_ID="https://myidp.com/auth/realms/REALM"
 
 #geração do Keystore a partir dos certificados publico e privado
 

@@ -2,8 +2,8 @@
   1.1 - Inport the X509 certificate in Keycloak settings for the client (SAML Keys)
   1.2 - Make sure Valid Redirect URLs are set, along with Logout Service Binding URLs
 
-3 - Update reload.sh with information injected into src/main/resources/application.yml
-  3.1 - Set SSL settings
+3 - Update reload.sh with information (to be injected into src/main/resources/application.yml)
+  3.1 - Set build-related information (variables are prefixed with JENKINS)
   3.2 - Set certificates (SP & IDP) 
   3.3 - Set IDP metadata and entity id (IDP Url for issuer) based on the realm
 

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Definição dos Controllers
  *
  * @author Luis
